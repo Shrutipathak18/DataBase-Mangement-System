@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Welcome, {{ username }}!</h1>
+        <p>You are now logged in.</p>
+
+        <!-- Add links to other pages -->
+        <a href="{{ url_for('update_profile') }}" class="btn btn-primary">Update Profile</a>
+        <a href="{{ url_for('reset_password') }}" class="btn btn-warning">Reset Password</a>
+        <a href="{{ url_for('grades') }}" class="btn btn-info">View Grades</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+</html>
